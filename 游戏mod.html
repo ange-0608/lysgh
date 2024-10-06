@@ -8,15 +8,15 @@
 	</head>
 	<body>
         
-		<span style="--i: 1">这</span>
-		<span style="--i: 2">里</span>
-		<span style="--i: 3">什</span>
-		<span style="--i: 4">么</span>
-		<span style="--i: 5">都</span>
-		<span style="--i: 6">没</span>
-		<span style="--i: 7">有</span>
-		<span style="--i: 8">~</span>
-		<span style="--i: 8">~</span>
+		<span style="--i: 1"><strong>这</strong></span>
+		<span style="--i: 2"><strong>里</strong></span>
+		<span style="--i: 3"><strong>什</strong></span>
+		<span style="--i: 4"><strong>么</strong></span>
+		<span style="--i: 5"><strong>都</strong></span>
+		<span style="--i: 6"><strong>没</strong></span>
+		<span style="--i: 7"><strong>有</strong></span>
+		<span style="--i: 8"><strong>~</strong></span>
+		<span style="--i: 9"><strong>~</strong></span>
 <style>@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
     /* 上面是引入好的字体样式 */
     * {
@@ -42,7 +42,7 @@
         /* 单词大写 */
         text-transform: uppercase;
         /* 文字阴影 */
-        text-shadow: 0 0 #f3c623, 0 0 #f2aaaa;
+        text-shadow: 0 0 #ffc802, 0 0 #cf7e7e;
         /* 让文字先向下走自身高度的50%,然后顺时针旋转4度 */
         transform: translate(0, 50%) rotate(4deg);
         /* 动画 名称 时长 第三个值是延迟时长 calc是自动计算的方法,里面写的var()函数是会调用我们事先自定义好的属性值,我们刚才给span添加的--i:*就是一个自定义属性,var()能调用到相应的span的定义好的属性值,然后在*120ms来计算每个文字的延迟时长省时省力,第四个值是两头慢,中间快,第五个值是无线运动 */
@@ -55,15 +55,15 @@
             text-shadow: 0 0 #f3c623, 0 0 #f2aaaa;
         }
         33.33% {
-            text-shadow: 0 60px #f37121, 0 120px #f2aaaa;
+            text-shadow: 0 60px #ff6e13, 0 120px #af7676;
         }
         50% {
-            text-shadow: 0 0 #8fc0a9, 0 0 #84a9ac;
+            text-shadow: 0 0 #5ace98, 0 0 #86d9e0;
             /* 这个跟刚才写的刚好相反动画到一半向上走自身的一半,逆时针旋转4度 */
             transform: translate(0, -50%) rotate(-4deg);
         }
         66.66% {
-            text-shadow: 0 -60px #d54062, 0 -120px #8fc0a9;
+            text-shadow: 0 -60px #f32998, 0 -120px #55a17e;
         }
     }</style>
 	</body>
