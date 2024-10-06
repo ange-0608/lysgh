@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.ico" /> 
+</head>
+<style>
+
+	.father{
+	width: 750px;
+	height: 80px;
+	margin: 0 auto;
+	border: 2px solid rgba(190, 191, 255, 0.466);
+	background-color: rgba(228, 255, 253, 0.637);
+	overflow: hidden;
+	box-shadow:10px 10px 20px rgba(23, 21, 46, 0.767);
+}
+.son{
+	width: 150px;
+	height: 80px;
+	float: left;
+	text-align: center;
+	line-height: 80px;
+	margin-right: 0px;
+	
+}
+.last{
+	margin-right: 0;
+}
+
+</style>
+<style type="text/css">
+
+	.son{
+		 cursor: pointer;
+		 transition: all 0.4s;
+	 }
+	 .son:hover{
+		 transform: scale(0.85);
+
+	 }
+ </style>
+<div id="box2" class="father">
+<div class="son" style="background-color: rgb(0, 204, 255);">
+	<a href="https://ange-0608.github.io/lysgh/lysgh.html">
+		<font size="5"><strong>主要</strong></font></a>
+	</div>
+
+<div class="son" style="background-color: rgb(0, 4, 255);">
+	<a href="游戏mod.html">
+	<font size="5"><strong>游戏mod</strong></font></a>
+</div>
+
+<div class="son" style="background-color: rgb(10, 0, 156);">
+    <a href="其它.html"><font size="5"><strong>其它</strong></font></a>
+	</div>
+
+
+<div class="son last" style="background-color: rgb(12, 6, 66);">
+	 <a href="坟地.html">
+		<font size="5"><strong>小墓碑们</strong></font></a>
+	</div>
+
+	<div class="son last" style="background-color: rgba(255, 0, 212, 0.726);">
+		<a href="留言板.html">
+		   <font size="5"><strong>留言板</strong></font></a>
+	   </div>
+</div>
+</ul>
+<style type="text/css">
+	body{
+		background: url("image/结婚证.jpg") no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -o-background-size: cover;                
+                background-size: cover;
+	}
+	</style>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    textarea {
+        width: 200px;
+        height: 80px;
+        border: 5px pink solid;
+        /* 不设置轮廓 */
+        outline: none;
+        /* 设置其不能改变长宽 */
+        resize: none;
+    }
+
+    li {
+        width: 300px;
+        padding: 5px;
+        background-color: #ff1c8d;
+        font-size: 15px;
+        margin: 15px 0;
+    }
+
+    li a {
+        float: right;
+    }
+</style>
+
+<body>
+    <textarea></textarea>
+    <button>发布</button>
+    <ul></ul>
+    <script>
+        //1、获取元素
+        var txt = document.querySelector("textarea");
+        var btn = document.querySelector("button");
+        var ul = document.querySelector("ul");
+        //2、给button绑定点击事件
+        btn.onclick = function () {
+            if (txt.value == "") {//当文本框中没有文字时，提示
+                alert("您没有输入内容")
+            } else {
+                //创建元素li作为留言区
+                var li = document.createElement("li");
+                //将文本框中的内容放到li中,a标签中href中的内容代表什么都不执行
+                li.innerHTML = txt.value + "<a href='javascript:;'>删除</a>"
+                txt.value = "";//添加之后文本框的内容清空
+                //将留言添加到ul中，而且在最上方
+                ul.insertBefore(li, ul.children[0]);
+                //当点击删除时删除ul中的li
+                var as = document.querySelectorAll("a");
+                //循环给每个删除绑定事件
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function () {
+                        //删除当前a标签所在位置的父节点li
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
