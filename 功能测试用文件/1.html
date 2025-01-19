@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>点击按钮触发音效</title>
+</head>
+<body>
+
+<button id="btn">点击我发出声音</button>
+<audio id="audio" src="vido/1729964852_0_fbf37ac027a15026.ogg"></audio>
+
+<script>
+document.getElementById('btn').addEventListener('click', function() {
+  var audio = document.getElementById('audio');
+  audio.play();
+});
+</script>
+
+</body>
+</html>

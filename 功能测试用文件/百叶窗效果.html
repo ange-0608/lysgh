@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>百叶窗</title>
+    <style>
+      /* CSS 对html结构做装饰 */
+      * {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        display: flex;
+        /* 弹性布局 */
+     
+        background-color: #096;
+        overflow: hidden;
+        /* 溢出隐藏 */
+      }
+      li {
+        width: 160px;
+        height: 500px;
+        transition: all 1s;
+      }
+      img {
+        height: 500px;
+      }
+      /* 动作 变大 变小*/
+      ul:hover li {
+        width: 40px;
+      }
+      ul li:hover {
+        width: 760px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><img src="image/教主.png" alt="1" /></li>
+      <li><img src="image/小辞.png" alt="2" /></li>
+      <li><img src="image/春日.png" alt="3" /></li>
+      <li><img src="image/鹅鹅.png" alt="4" /></li>
+      <li><img src="image/工弟.png" alt="5" /></li>
+      <li><img src="image/安吉.png" alt="6" /></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ .container {
+   position: relative;
+   width: 400px;
+   height: 400px;
+ }
+
+ .box1 {
+   position: relative;
+   z-index: 1;
+   background-color: red;
+   width: 200px;
+   height: 200px;
+   left: 100px;
+   top: 100px;
+ }
+
+ .box2 {
+   position: absolute;
+   z-index: 2;
+   background-color: blue;
+   width: 200px;
+   height: 200px;
+   left: 150px;
+   top: 150px;
+ }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box1"></div>
+  <div class="box2"></div>
+</div>
+
+</body>
+</html>
